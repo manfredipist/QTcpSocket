@@ -46,6 +46,7 @@ void MainWindow::appendToSocketList(QTcpSocket* socket)
     connect(socket, SIGNAL(readyRead()), this , SLOT(readSocket()));
     connect(socket, SIGNAL(disconnected()), this , SLOT(discardSocket()));
     this->ui->comboBox_receiver->addItem(QString::number(socket->socketDescriptor()));
+    displayMessages(QString("INFO::Client with sockd:%1 has just entered the room").arg(socket->socketDescriptor()));
 }
 
 void MainWindow::readSocket()
@@ -54,7 +55,7 @@ void MainWindow::readSocket()
 
     QByteArray block = socket->readAll();
     QDataStream in(&block, QIODevice::ReadOnly);
-    in.setVersion(QDataStream::Qt_5_11);
+    in.setVersion(QDataStream::Qt_5_12);
 
     while (!in.atEnd())
     {
@@ -118,7 +119,7 @@ void MainWindow::sendMessage(QTcpSocket* socket)
             QByteArray block;
             QDataStream out(&block, QIODevice::WriteOnly);
 
-            out.setVersion(QDataStream::Qt_5_11);
+            out.setVersion(QDataStream::Qt_5_12);
             out << str;
             socket->write(block);
         }
