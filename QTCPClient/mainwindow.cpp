@@ -32,7 +32,7 @@ void MainWindow::readSocket()
     QByteArray block = socket->readAll();
 
     QDataStream in(&block, QIODevice::ReadOnly);
-    in.setVersion(QDataStream::Qt_5_11);
+    in.setVersion(QDataStream::Qt_5_12);
 
     while (!in.atEnd())
     {
@@ -62,7 +62,7 @@ void MainWindow::on_pushButton_sendMessage_clicked()
             QByteArray block;
             QDataStream out(&block, QIODevice::WriteOnly);
 
-            out.setVersion(QDataStream::Qt_5_11);
+            out.setVersion(QDataStream::Qt_5_12);
             out << str;
 
             socket->write(block);
