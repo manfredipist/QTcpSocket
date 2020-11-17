@@ -4,10 +4,13 @@
 #include <QMainWindow>
 #include <QAbstractSocket>
 #include <QDebug>
+#include <QFile>
+#include <QFileDialog>
 #include <QHostAddress>
 #include <QMessageBox>
 #include <QMetaType>
 #include <QString>
+#include <QStandardPaths>
 #include <QTcpSocket>
 
 namespace Ui {
@@ -26,9 +29,11 @@ signals:
 private slots:
     void readSocket();
     void discardSocket();
+    void displayError(QAbstractSocket::SocketError socketError);
 
     void displayMessage(const QString& str);
     void on_pushButton_sendMessage_clicked();
+    void on_pushButton_sendAttachment_clicked();
 private:
     Ui::MainWindow *ui;
 

@@ -6,79 +6,89 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>442</width>
-    <height>337</height>
+    <width>401</width>
+    <height>358</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>QTCPServer</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgba(37, 37, 37, 179);</string>
+   <string notr="true"/>
   </property>
   <widget class="QWidget" name="centralWidget">
    <layout class="QGridLayout" name="gridLayout">
-    <item row="1" column="2">
-     <widget class="QPushButton" name="pushButton_sendMessage">
-      <property name="minimumSize">
-       <size>
-        <width>0</width>
-        <height>0</height>
-       </size>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(31, 178, 255);
-color:white;
-border-width: 2px;
-border-style: solid;
-border-color: rgb(43, 162, 255);
-border-radius: 10px;
-padding: 5px;
-</string>
-      </property>
-      <property name="text">
-       <string>Send</string>
-      </property>
-     </widget>
-    </item>
-    <item row="0" column="0" colspan="3">
+    <item row="0" column="0">
      <widget class="QTextBrowser" name="textBrowser_receivedMessages">
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(0, 0, 0);</string>
+       <string notr="true"/>
       </property>
      </widget>
     </item>
     <item row="1" column="0">
-     <widget class="QComboBox" name="comboBox_receiver">
-      <property name="minimumSize">
-       <size>
-        <width>110</width>
-        <height>0</height>
-       </size>
-      </property>
-      <item>
-       <property name="text">
-        <string>Broadcast</string>
-       </property>
+     <layout class="QGridLayout" name="gridLayout_2">
+      <item row="1" column="0">
+       <widget class="QPushButton" name="pushButton_sendMessage">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string>Send Message</string>
+        </property>
+       </widget>
       </item>
-     </widget>
-    </item>
-    <item row="1" column="1">
-     <widget class="QLineEdit" name="lineEdit_message">
-      <property name="minimumSize">
-       <size>
-        <width>150</width>
-        <height>0</height>
-       </size>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(0, 0, 0);
-border-width: 2px;
-border-style: solid;
-border-color: rgb(69, 70, 70);
-border-radius: 10px;</string>
-      </property>
-     </widget>
+      <item row="1" column="1">
+       <widget class="QPushButton" name="pushButton_sendAttachment">
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string>Send attachment</string>
+        </property>
+        <property name="flat">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0" colspan="2">
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <widget class="QComboBox" name="comboBox_receiver">
+          <property name="minimumSize">
+           <size>
+            <width>110</width>
+            <height>0</height>
+           </size>
+          </property>
+          <item>
+           <property name="text">
+            <string>Broadcast</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="lineEdit_message">
+          <property name="minimumSize">
+           <size>
+            <width>150</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
     </item>
    </layout>
   </widget>
@@ -87,8 +97,8 @@ border-radius: 10px;</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>442</width>
-     <height>22</height>
+     <width>401</width>
+     <height>21</height>
     </rect>
    </property>
   </widget>
