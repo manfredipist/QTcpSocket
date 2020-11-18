@@ -43,7 +43,7 @@
          <string notr="true"/>
         </property>
         <property name="text">
-         <string>Send attachment</string>
+         <string>Send Attachment</string>
         </property>
        </widget>
       </item>

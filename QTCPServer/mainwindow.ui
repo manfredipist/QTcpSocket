@@ -49,7 +49,7 @@
          <string notr="true"/>
         </property>
         <property name="text">
-         <string>Send attachment</string>
+         <string>Send Attachment</string>
         </property>
         <property name="flat">
          <bool>false</bool>
