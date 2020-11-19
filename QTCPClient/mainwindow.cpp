@@ -121,7 +121,6 @@ void MainWindow::on_pushButton_sendMessage_clicked()
             QByteArray byteArray = str.toUtf8();
             byteArray.prepend(header);
 
-            socketStream.setVersion(QDataStream::Qt_5_15);
             socketStream << byteArray;
 
             ui->lineEdit_message->clear();

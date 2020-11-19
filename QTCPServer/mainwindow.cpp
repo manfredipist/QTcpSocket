@@ -241,7 +241,6 @@ void MainWindow::sendAttachment(QTcpSocket* socket, QString filePath)
                 QByteArray byteArray = m_file.readAll();
                 byteArray.prepend(header);
 
-                socketStream.setVersion(QDataStream::Qt_5_15);
                 socketStream << byteArray;
             }else
                 QMessageBox::critical(this,"QTCPClient","Couldn't open the attachment!");
