@@ -95,7 +95,7 @@ void MainWindow::displayError(QAbstractSocket::SocketError socketError)
             QMessageBox::information(this, "QTCPClient", "The host was not found. Please check the host name and port settings.");
         break;
         case QAbstractSocket::ConnectionRefusedError:
-            QMessageBox::information(this, "QTCPClient", "The connection was refused by the peer. Make sure the fortune server is running, and check that the host name and port settings are correct.");
+            QMessageBox::information(this, "QTCPClient", "The connection was refused by the peer. Make sure QTCPServer is running, and check that the host name and port settings are correct.");
         break;
         default:
             QMessageBox::information(this, "QTCPClient", QString("The following error occurred: %1.").arg(socket->errorString()));

@@ -7,7 +7,7 @@
 #include <QFileDialog>
 #include <QMessageBox>
 #include <QMetaType>
-#include <QString>
+#include <QSet>
 #include <QStandardPaths>
 #include <QTcpServer>
 #include <QTcpSocket>
@@ -40,11 +40,13 @@ private slots:
 
     void on_pushButton_sendMessage_clicked();
     void on_pushButton_sendAttachment_clicked();
+
+    void refreshComboBox();
 private:
     Ui::MainWindow *ui;
 
     QTcpServer* m_server;
-    QList<QTcpSocket*> connection_list;
+    QSet<QTcpSocket*> connection_set;
 };
 
 #endif // MAINWINDOW_H
