@@ -104,7 +104,7 @@ void MainWindow::discardSocket()
     QTcpSocket* socket = reinterpret_cast<QTcpSocket*>(sender());
     QSet<QTcpSocket*>::iterator it = connection_set.find(socket);
     if (it != connection_set.end()){
-        displayMessage(QString("INFO :: A client with sockd:%1 has just left the room").arg(socket->socketDescriptor()));
+        displayMessage(QString("INFO :: A client has just left the room").arg(socket->socketDescriptor()));
         connection_set.remove(*it);
     }
     refreshComboBox();
