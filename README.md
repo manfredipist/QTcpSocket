@@ -37,4 +37,4 @@ Where:
 
 Many improvements could have been made during protocol design, one among many, to specify header size in the header and save up some byte during transfers, especially messages ones.
 
-__*This protocol is meant to be used only for recreative purposes as it isn't compliant at all to the FTP quality standards, that we are used to, in these days.*__
+__*This protocol is meant to be used only for recreative purposes as it isn't compliant at all to the FTP quality standards, that we are used to, nowadays.*__
