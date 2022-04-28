@@ -17,6 +17,7 @@ You can instantiate as many QTCPClient as you wish.
 3. Media transferring capabilities (*.json, *.txt, *.png, *.jpg, *.jpeg)  
 4. Updated to latest slot-signal syntax found in Qt 5.15
 5. Non-redundant design
+6. Available on macOS and Windows
 
 ## Protocol
 
